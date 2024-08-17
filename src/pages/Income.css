@@ -1,0 +1,40 @@
+.income-page {
+    padding: 20px;
+  }
+  
+  .income-page h1 {
+    text-align: center;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input, form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .income-list {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .income-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .income-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .income-list button {
+    margin-right: 10px;
+  }
+  

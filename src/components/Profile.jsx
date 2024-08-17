@@ -1,15 +1,23 @@
-import { useContext } from "react";
-import { AuthContext } from "../contexts/Auth.context";
-import Navbar from "./Navbar";
+import { useContext } from 'react';
+import { AuthContext } from '../contexts/Auth.context';
 
 const Profile = () => {
-  const ourContext = useContext(AuthContext);
-  console.log("here is the name", ourContext);
+  const { user } = useContext(AuthContext);
+
   return (
-    <div>
-      <Navbar />
-      <h2>{ourContext.user.name}'s Profile</h2>
+    <div className="profile-page">
+      <h1>Profile</h1>
+      {user ? (
+        <div>
+          <p>Username: {user.name}</p>
+          <p>Email: {user.email}</p>
+          {/* Additional user info */}
+        </div>
+      ) : (
+        <p>Loading user information...</p>
+      )}
     </div>
   );
 };
+
 export default Profile;
