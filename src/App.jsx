@@ -39,7 +39,7 @@ function App() {
           path="/income"
           element={
             <IsPrivate>
-              <Income /> {/* Income route */}
+              <Income /> 
             </IsPrivate>
           }
         />
