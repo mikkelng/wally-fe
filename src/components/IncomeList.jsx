@@ -5,7 +5,7 @@ const IncomeList = ({ incomeList, onEdit, onDelete }) => {
     <ul>
       {incomeList.map((income) => (
         <li key={income._id}>
-          <span>{income.source} - ${income.amount}</span>
+          <span>{income.category} - ${income.amount}</span>
           <button onClick={() => onEdit(income)}>Edit</button>
           <button onClick={() => onDelete(income._id)}>Delete</button>
         </li>

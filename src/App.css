@@ -39,3 +39,11 @@
 .login-page button:hover {
   background-color: #0056b3;
 }
+
+.main-content.full-width {
+  width: 100%; 
+}
+
+.main-content.with-sidebar {
+  margin-left: 250px; 
+}

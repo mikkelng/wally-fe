@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 
 const IncomeForm = ({ onSubmit, income }) => {
   const [amount, setAmount] = useState('');
-  const [source, setSource] = useState('');
+  const [category, setCategory] = useState('');
   const [description, setDescription] = useState('');
   const [date, setDate] = useState('');
 
   useEffect(() => {
     if (income) {
       setAmount(income.amount);
-      setSource(income.source);
+      setCategory(income.category);
       setDescription(income.description);
       setDate(income.date);
     }
@@ -17,10 +17,10 @@ const IncomeForm = ({ onSubmit, income }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newIncome = { amount, source, description, date };
+    const newIncome = { amount, category, description, date };
     onSubmit(newIncome);
     setAmount('');
-    setSource('');
+    setCategory('');
     setDescription('');
     setDate('');
   };
@@ -28,7 +28,7 @@ const IncomeForm = ({ onSubmit, income }) => {
   return (
     <form onSubmit={handleSubmit}>
       <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Amount" required />
-      <input type="text" value={source} onChange={(e) => setSource(e.target.value)} placeholder="Source" required />
+      <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Category" required />
       <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" />
       <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
       <button type="submit">Save Income</button>

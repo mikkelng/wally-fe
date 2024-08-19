@@ -32,6 +32,8 @@ const AuthWrapper = ({ children }) => {
   };
   const handleLogout = () => {
     localStorage.removeItem("authToken");
+    setIsLoggedIn(false); 
+    setUser(null);
     nav("/login");
   };
   return (

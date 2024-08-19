@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import IncomeForm from '../components/IncomeForm';
-import "./Income.css"
+import { useState, useEffect } from "react";
+import axios from "axios";
+import IncomeForm from "../components/IncomeForm";
+import "./Income.css";
 
 const Income = () => {
   const [incomes, setIncomes] = useState([]);
@@ -13,50 +13,60 @@ const Income = () => {
 
   const fetchIncomes = async () => {
     try {
-      const token = localStorage.getItem('authToken');
-      const { data } = await axios.get('http://localhost:5005/income', {
-        headers: { Authorization: `Bearer ${token}` }
+      const token = localStorage.getItem("authToken");
+      const { data } = await axios.get("http://localhost:5005/api/income", {
+        headers: { Authorization: `Bearer ${token}` },
       });
       setIncomes(data);
     } catch (error) {
-      console.error('Error fetching income data:', error);
+      console.error("Error fetching income data:", error);
     }
   };
 
   const handleAddIncome = async (newIncome) => {
     try {
-      const token = localStorage.getItem('authToken');
-      const { data } = await axios.post('http://localhost:5005/income', newIncome, {
-        headers: { Authorization: `Bearer ${token}` }
-      });
+      const token = localStorage.getItem("authToken");
+      const { data } = await axios.post(
+        "http://localhost:5005/api/income",
+        newIncome,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       setIncomes([...incomes, data]);
     } catch (error) {
-      console.error('Error adding income:', error);
+      console.error("Error adding income:", error);
     }
   };
 
   const handleEditIncome = async (updatedIncome) => {
     try {
-      const token = localStorage.getItem('authToken');
-      const { data } = await axios.put(`http://localhost:5005/income/${editingIncome._id}`, updatedIncome, {
-        headers: { Authorization: `Bearer ${token}` }
-      });
-      setIncomes(incomes.map((income) => (income._id === data._id ? data : income)));
+      const token = localStorage.getItem("authToken");
+      const { data } = await axios.put(
+        `http://localhost:5005/api/income/${editingIncome._id}`,
+        updatedIncome,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+      setIncomes(
+        incomes.map((income) => (income._id === data._id ? data : income))
+      );
       setEditingIncome(null);
     } catch (error) {
-      console.error('Error editing income:', error);
+      console.error("Error editing income:", error);
     }
   };
 
   const handleDeleteIncome = async (id) => {
     try {
-      const token = localStorage.getItem('authToken');
-      await axios.delete(`http://localhost:5005/income/${id}`, {
-        headers: { Authorization: `Bearer ${token}` }
+      const token = localStorage.getItem("authToken");
+      await axios.delete(`http://localhost:5005/api/income/${id}`, {
+        headers: { Authorization: `Bearer ${token}` },
       });
       setIncomes(incomes.filter((income) => income._id !== id));
     } catch (error) {
-      console.error('Error deleting income:', error);
+      console.error("Error deleting income:", error);
     }
   };
 
@@ -78,14 +88,29 @@ const Income = () => {
           <ul>
             {incomes.map((income) => (
               <li key={income._id}>
-                <p><strong>Amount:</strong> ${income.amount}</p>
-                <p><strong>Source:</strong> {income.source}</p>
-                <p><strong>Description:</strong> {income.description}</p>
-                <p><strong>Date:</strong> {new Date(income.date).toLocaleDateString()}</p>
-                <button onClick={() => {
-                  setEditingIncome(income);
-                }}>Edit</button>
-                <button onClick={() => handleDeleteIncome(income._id)}>Delete</button>
+                <p>
+                  <strong>Amount:</strong> ${income.amount}
+                </p>
+                <p>
+                  <strong>Category:</strong> {income.category}
+                </p>
+                <p>
+                  <strong>Description:</strong> {income.description}
+                </p>
+                <p>
+                  <strong>Date:</strong>{" "}
+                  {new Date(income.date).toLocaleDateString()}
+                </p>
+                <button
+                  onClick={() => {
+                    setEditingIncome(income);
+                  }}
+                >
+                  Edit
+                </button>
+                <button onClick={() => handleDeleteIncome(income._id)}>
+                  Delete
+                </button>
               </li>
             ))}
           </ul>

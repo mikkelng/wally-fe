@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div>
       Navbar
-      <button onClick={handleLogout}>Logout</button>
+
     </div>
   );
 };
