@@ -13,10 +13,10 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     const userToLogin = { email, password };
-
+    console.log("here is the api url", API_URL )
     try {
       const { data } = await axios.post(
-        "http://localhost:5005/auth/login",
+        `${API_URL}/auth/login`,
         userToLogin
       );
       console.log("successfully logged in", data);

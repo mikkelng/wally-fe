@@ -11,7 +11,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="profile-section">
         <img src={avatar} alt="Profile Icon" />
-        <p>{user?.name}</p> {/* Display the username from the AuthContext */}
+        <p>{user?.name}</p>
       </div>
       <nav>
         <ul>

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import ExpenseForm from '../components/ExpenseForm';
 import './Expenses.css';
+import { API_URL } from "../config";
 
 // Example colors for the pie chart
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
@@ -18,7 +19,7 @@ const Expense = () => {
     const fetchExpenses = async () => {
         try {
             const token = localStorage.getItem('authToken');
-            const { data } = await axios.get('http://localhost:5005/api/expenses', {
+            const { data } = await axios.get(`${API_URL}/api/expenses`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setExpenses(data);
@@ -31,7 +32,7 @@ const Expense = () => {
         try {
             const token = localStorage.getItem('authToken');
             const { data } = await axios.post(
-                'http://localhost:5005/api/expenses',
+                `${API_URL}/api/expenses`,
                 newExpense,
                 {
                     headers: { Authorization: `Bearer ${token}` },
@@ -47,7 +48,7 @@ const Expense = () => {
         try {
             const token = localStorage.getItem('authToken');
             const { data } = await axios.put(
-                `http://localhost:5005/api/expenses/${editingExpense._id}`,
+                `${API_URL}/api/expenses/${editingExpense._id}`,
                 updatedExpense,
                 {
                     headers: { Authorization: `Bearer ${token}` },
@@ -67,7 +68,7 @@ const Expense = () => {
     const handleDeleteExpense = async (id) => {
         try {
             const token = localStorage.getItem('authToken');
-            await axios.delete(`http://localhost:5005/api/expenses/${id}`, {
+            await axios.delete(`${API_URL}/api/expenses/${id}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setExpenses(expenses.filter((expense) => expense._id !== id));

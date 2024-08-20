@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import IncomeForm from "../components/IncomeForm";
 import "./Income.css";
+import { API_URL } from "../config";
 
 const Income = () => {
   const [incomes, setIncomes] = useState([]);
@@ -14,7 +15,7 @@ const Income = () => {
   const fetchIncomes = async () => {
     try {
       const token = localStorage.getItem("authToken");
-      const { data } = await axios.get("http://localhost:5005/api/income", {
+      const { data } = await axios.get(`${API_URL}/api/income`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setIncomes(data);
@@ -27,7 +28,7 @@ const Income = () => {
     try {
       const token = localStorage.getItem("authToken");
       const { data } = await axios.post(
-        "http://localhost:5005/api/income",
+        `${API_URL}/api/income`,
         newIncome,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -43,7 +44,7 @@ const Income = () => {
     try {
       const token = localStorage.getItem("authToken");
       const { data } = await axios.put(
-        `http://localhost:5005/api/income/${editingIncome._id}`,
+        `${API_URL}/api/income/${editingIncome._id}`,
         updatedIncome,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -61,7 +62,7 @@ const Income = () => {
   const handleDeleteIncome = async (id) => {
     try {
       const token = localStorage.getItem("authToken");
-      await axios.delete(`http://localhost:5005/api/income/${id}`, {
+      await axios.delete(`${API_URL}/api/income/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setIncomes(incomes.filter((income) => income._id !== id));
