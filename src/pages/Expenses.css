@@ -62,9 +62,9 @@
 .expense-chart {
     width: 200px; /* Width of the chart */
     height: 140px; /* Height of the chart */
-    background-color: #f5f5f5; /* Light background for visibility */
-    margin-left: 20px; /* Margin from the left */
-    margin-top: -600px; /* Ensure the chart stays up by 600px */
+    background-color: white; /* Light background for visibility */
+    margin-left: 800px; /* Margin from the left */
+    margin-top: -550px; /* Ensure the chart stays up by 600px */
     border-radius: 5px; /* Rounded corners */
     position: relative; /* Position relative for consistent layout */
 }
