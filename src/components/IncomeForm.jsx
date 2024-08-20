@@ -31,7 +31,7 @@ const IncomeForm = ({ onSubmit, income }) => {
       <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Category" required />
       <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" />
       <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
-      <button type="submit">Save Income</button>
+      <button className='inc_btn' type="submit">Save Income</button>
     </form>
   );
 };

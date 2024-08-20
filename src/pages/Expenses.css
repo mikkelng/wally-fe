@@ -1,0 +1,60 @@
+.expense-page {
+    width: 1000px;
+    height: 700px;
+    background: white;
+    margin-left: 30px;
+    border-radius: 20px;
+    padding: 30px 80px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -40% );
+}
+
+.exp_btn {
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #98bfe3;
+    display: inline-block;
+    line-height: 2;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.expense-page h1 {
+    color: #98bfe3;
+}
+
+.expense-list {
+    font-size: 19px;
+    margin: 20px;
+}
+
+.expense-list h2 {
+    color: #98bfe3;
+    margin: 30px 0 -10px 0;
+}
+
+.expense-list ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 30px;
+    text-align: left;
+}
+
+.list_btn {
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #98bfe3;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 0 3px 0 3px;
+}

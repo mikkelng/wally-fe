@@ -101,14 +101,14 @@ const Expense = () => {
                   <strong>Date:</strong>{" "}
                   {new Date(expense.date).toLocaleDateString()}
                 </p>
-                <button
+                <button className="list_btn"
                   onClick={() => {
                     setEditingExpense(expense);
                   }}
                 >
                   Edit
                 </button>
-                <button onClick={() => handleDeleteExpense(expense._id)}>
+                <button className="list_btn" onClick={() => handleDeleteExpense(expense._id)}>
                   Delete
                 </button>
               </li>

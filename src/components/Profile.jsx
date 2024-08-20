@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { AuthContext } from '../contexts/Auth.context';
+import "../App.css";
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
@@ -9,9 +10,12 @@ const Profile = () => {
       <h1>Profile</h1>
       {user ? (
         <div>
-          <p>Username: {user.name}</p>
-          <p>Email: {user.email}</p>
-          {/* Additional user info */}
+          <h3>Username:</h3>
+          <p>{user.name}</p>
+         
+          <h3>Email: </h3>
+          <p>{user.email}</p>
+   
         </div>
       ) : (
         <p>Loading user information...</p>

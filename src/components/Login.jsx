@@ -2,6 +2,8 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/Auth.context";
+import { API_URL } from "../config";
+import "./Logsignin.css"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,27 +28,28 @@ const Login = () => {
     }
   };
 
+
   return (
     <div>
-      <h1>Login with us</h1>
-      <form onSubmit={handleLogin}>
+      <h1>Login with us!</h1>
+      <form className="txt_field" onSubmit={handleLogin}>
         <label>
-          Email:
+          Email
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-        </label>{" "}
+        </label>
         <label>
-          Password:
+          Password
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <button>Login</button>
+        <button className="logsign_btn">Login</button>
       </form>
       <p>
         Sign up now! <Link to="/">Signup</Link>

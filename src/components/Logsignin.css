@@ -1,0 +1,40 @@
+body {
+    font-family: 'Poppins';
+    background-color: #98bfe3;
+    overflow: hidden;
+  }
+  
+  .logsign_ctn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40% );
+    width: 400px;
+    height: 500px;
+    background: white;
+    border-radius: 20px;
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .txt_field input {
+    display: block;
+    margin: 10px auto;
+    outline: none;
+  }
+  
+  .logsign_btn {
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #98bfe3;
+    display: inline-block;
+    line-height: 2;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 200px;
+    margin: 10px auto;
+  }

@@ -31,7 +31,7 @@ const ExpenseForm = ({ onSubmit, expense }) => {
       <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Category" required />
       <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" />
       <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
-      <button type="submit">Save Expense</button>
+      <button className='exp_btn' type="submit">Save Expense</button>
     </form>
   );
 };

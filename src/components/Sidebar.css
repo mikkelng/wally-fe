@@ -1,16 +1,18 @@
 .sidebar {
-    width: 250px;
-    background-color: #f4f4f4;
-    padding: 20px;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
   }
   
   .profile-section {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   
   .profile-section img {
-    width: 50px;
+    width: 80px;
     border-radius: 50%;
   }
   
@@ -30,17 +32,26 @@
   
   nav ul li a, nav ul li button {
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
+    color: black;
+    font-size: 20px;
     display: block;
-    width: 100%;
     text-align: left;
-    background: none;
     border: none;
     cursor: pointer;
   }
-  
-  nav ul li button:hover, nav ul li a:hover {
-    color: #007bff;
+
+  .logout_btn {
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #98bfe3;
+    display: inline-block;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    margin-top: 425px;
   }
   

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "./Logsignin.css"
 
 const SignUp = () => {
   const [username, setUserName] = useState("");
@@ -26,9 +27,9 @@ const SignUp = () => {
   return (
     <div>
       <h1>Signup with us!</h1>
-      <form onSubmit={handleSignUp}>
+      <form className="txt_field" onSubmit={handleSignUp}>
         <label>
-          Username:
+          Username
           <input
             type="text"
             value={username}
@@ -36,7 +37,7 @@ const SignUp = () => {
           />
         </label>
         <label>
-          Email:
+          Email
           <input
             type="email"
             value={email}
@@ -44,17 +45,17 @@ const SignUp = () => {
           />
         </label>{" "}
         <label>
-          Password:
+          Password
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <button>Sign Up</button>
+        <button className="logsign_btn">Sign Up</button>
       </form>
       <p>
-        Login with the button on the right!<Link to="/login">Login</Link>
+        Login with the button on the right! <Link to="/login">Login</Link>
       </p>
     </div>
   );

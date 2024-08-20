@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="app-container">
       {isLoggedIn && <Sidebar />}
-      <div className={`main-content ${isLoggedIn ? 'with-sidebar' : 'full-width'}`}>
+      <div className={`logsign_ctn ${isLoggedIn ? 'with-sidebar' : 'full-width'}`}>
         <Routes>
           <Route path="/" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
