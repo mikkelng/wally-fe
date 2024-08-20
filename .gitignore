@@ -12,7 +12,7 @@ node_modules
 dist
 dist-ssr
 *.local
-src/assets/Streamlabs+Desktop+Setup+1.17.0-RdaXLlt17hyyteS.exe
+*.exe
 
 
 # Editor directories and files
