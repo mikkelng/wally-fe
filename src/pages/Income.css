@@ -1,74 +1,73 @@
 .income-page {
-    width: 1000px;
-    height: 700px;
-    background: white;
-    margin-left: 30px;
-    border-radius: 20px;
-    padding: 30px 80px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -40% );
-  }
-  
-  .inc_btn {
-    cursor: pointer;
-    outline: 0;
-    color: #fff;
-    background-color: #98bfe3;
-    display: inline-block;
-    line-height: 2;
-    border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 18px;
-    border-radius: 10px;
-    width: 100%;
-    margin: 10px auto;
-  }
-
-  .income-page h1 {
-    color: #98bfe3;
-  }
-  
-  form {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  form input, form button {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .income-list {
-    font-size: 19px;
-    margin: 20px;
-  }
-  
-  .income-list h2 {
-    color: #98bfe3;
-    margin: 30px 0 -10px 0;
-  }
-
-  .income-list ul li {
-    list-style-type: none;
-    display: inline-block;
-    margin-right: 30px;
-    text-align: left;
+  width: 1000px;
+  height: 700px;
+  background: white;
+  margin-left: 30px;
+  border-radius: 20px;
+  padding: 30px 80px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -40% );
 }
-  
-  .income-list button {
-    cursor: pointer;
-    outline: 0;
-    color: #fff;
-    background-color: #98bfe3;
-    border: 1px solid transparent;
-    padding: 5px 10px;
-    font-size: 18px;
-    border-radius: 10px;
-    margin: 0 3px 0 3px;
-  }
-  
+
+.inc_btn {
+  cursor: pointer;
+  outline: 0;
+  color: #fff;
+  background-color: #98bfe3;
+  display: inline-block;
+  line-height: 2;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.income-page h1 {
+  color: #98bfe3;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form button {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.income-list {
+  font-size: 19px;
+  margin: 20px;
+}
+
+.income-list h2 {
+  color: #98bfe3;
+  margin: 30px 0 -10px 0;
+}
+
+.income-list ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 30px;
+  text-align: left;
+}
+
+.income-list button {
+  cursor: pointer;
+  outline: 0;
+  color: #fff;
+  background-color: #98bfe3;
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  margin: 0 3px 0 3px;
+}
